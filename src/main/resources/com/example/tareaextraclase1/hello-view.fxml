@@ -1,16 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.tareaextraclase1.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="389.0" prefWidth="369.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#eecae1" height="37.0" layoutX="122.0" layoutY="36.0" stroke="BLACK" strokeType="INSIDE" width="126.0" />
+      <Label layoutX="103.0" layoutY="14.0" text="Calculadora de edades!" textFill="#f89df1">
+         <font>
+            <Font name="Showcard Gothic" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="37.0" layoutY="39.0" prefHeight="29.0" prefWidth="66.0" text="Resultado:">
+         <font>
+            <Font name="Pristina" size="18.0" />
+         </font>
+      </Label>
+      <Line endX="-100.0" endY="237.0" layoutX="285.0" layoutY="133.0" startX="-100.0" startY="-44.0" />
+      <Label fx:id="resultado" layoutX="128.0" layoutY="44.0" prefHeight="22.0" prefWidth="116.0">
+         <font>
+            <Font name="Rockwell Extra Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="89.0" prefHeight="29.0" prefWidth="156.0" text="Agregar una persona!" textFill="#ffb7ef">
+         <font>
+            <Font name="Showcard Gothic" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="244.0" layoutY="93.0" prefHeight="22.0" prefWidth="94.0" text="Operaciones!" textFill="#ebaddb">
+         <font>
+            <Font name="Showcard Gothic" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nombreIngresado" layoutX="18.0" layoutY="133.0" promptText="Nombre de la persona" />
+      <MenuButton layoutX="14.0" layoutY="170.0" mnemonicParsing="false" text="Provincia">
+        <items>
+          <MenuItem mnemonicParsing="false" onAction="#cartago" text="Cartago" />
+            <MenuItem mnemonicParsing="false" onAction="#sj" text="San José" />
+            <MenuItem mnemonicParsing="false" onAction="#alaj" text="Alajuela" />
+            <MenuItem mnemonicParsing="false" onAction="#here" text="Heredia" />
+            <MenuItem mnemonicParsing="false" onAction="#mimon" text="Limón" />
+            <MenuItem mnemonicParsing="false" onAction="#ponitsand" text="Puntarenas" />
+            <MenuItem mnemonicParsing="false" onAction="#guana" text="Guanacaste" />
+        </items>
+      </MenuButton>
+      <TextField fx:id="Edad" layoutX="18.0" layoutY="205.0" promptText="Edad" />
+      <Button cache="true" cacheHint="ROTATE" layoutX="40.0" layoutY="260.0" mnemonicParsing="false" onAction="#nuevaPersona" prefHeight="63.0" prefWidth="104.0" text="Crear persona">
+         <effect>
+            <ColorAdjust />
+         </effect>
+      </Button>
+      <MenuButton layoutX="239.0" layoutY="158.0" mnemonicParsing="false" text="Persona 1">
+        <items>
+          <MenuItem mnemonicParsing="false" onAction="#persona11" text="Action 1" />
+          <MenuItem mnemonicParsing="false" onAction="#persona21" text="Action 2" />
+            <MenuItem mnemonicParsing="false" onAction="#persona31" text="Action 1" />
+            <MenuItem mnemonicParsing="false" onAction="#persona41" text="Action 1" />
+        </items>
+      </MenuButton>
+      <MenuButton layoutX="239.0" layoutY="205.0" mnemonicParsing="false" text="Persona 2">
+        <items>
+          <MenuItem mnemonicParsing="false" onAction="#persona21" text="Action 1" />
+          <MenuItem mnemonicParsing="false" onAction="#persona22" text="Action 2" />
+            <MenuItem mnemonicParsing="false" onAction="#persona32" text="Action 2" />
+            <MenuItem mnemonicParsing="false" onAction="#persona42" text="Action 2" />
+        </items>
+      </MenuButton>
+      <TextField fx:id="Provincia" layoutX="101.0" layoutY="170.0" prefHeight="25.0" prefWidth="80.0" />
+      <Button layoutX="214.0" layoutY="279.0" mnemonicParsing="false" onAction="#suma" text="+" />
+      <Button layoutX="248.0" layoutY="279.0" mnemonicParsing="false" onAction="#resta" text="-" />
+      <Button layoutX="280.0" layoutY="279.0" mnemonicParsing="false" onAction="#multi" text="*" />
+      <Button layoutX="313.0" layoutY="279.0" mnemonicParsing="false" onAction="#divi" prefHeight="25.0" prefWidth="1.0" text="/" />
+   </children>
+</AnchorPane>
